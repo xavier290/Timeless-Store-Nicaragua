@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+
+// Base stuff
+@use "base/base";
+@use "base/helpers";
+
+// responsive
+@use "responsive/queries";
+
+// pages
+@use "pages/catalog";
+@use "pages/main";
+
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+

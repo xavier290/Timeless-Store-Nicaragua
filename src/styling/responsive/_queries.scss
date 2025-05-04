@@ -1,0 +1,229 @@
+// Responsive Styles
+@media (max-width: 1024px) {
+    .header {
+        .navbar {
+            width: 40% !important;
+        }
+    }
+    .catalog {
+
+        .carousel {
+            grid-template-columns: 1fr 1fr !important;
+            grid-template-rows: auto auto; // 2 rows
+            gap: 0.6rem !important;
+            padding-top: 20px !important;
+            
+            .carousel-content {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+
+                h2 {
+                    font-size: 1.4rem !important;
+                }
+                p {
+                    font-size: 0.8rem !important;
+                }
+            }
+
+            .carousel-image {
+                grid-column: 2 / 3;
+                grid-row: 1 / 3;
+
+                img {
+                    max-width: 90% !important;
+                }
+            }
+
+            .carousel-otherdetails {
+                grid-column: 1 / 2; // take full width (both columns) in second row
+                grid-row: 2 / 3;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+                h3 {
+                    font-size: 1.2rem !important;
+                }
+                ul {
+            
+                    li {
+                        font-size: 0.8rem !important;
+                    }
+                }
+            }
+            .carousel-controls {
+                display: none !important;
+            }
+            .carousel-controls-bottom {
+                position: fixed; // now floating over the page
+                bottom: 0.8rem; // distance from bottom
+                left: 50%; // center horizontally
+                transform: translateX(-50%); // perfect center
+                display: flex !important;
+                justify-content: center;
+                gap: 1rem;
+
+                button {
+                    padding: 0.6rem 1.2rem;
+                    font-size: 1.5rem;
+                    background-color: #000;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    width: 48px;
+                    height: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: background-color 0.3s, transform 0.2s;
+          
+                    &:hover {
+                      background-color: #333;
+                      transform: scale(1.05);
+                    }
+                  }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .catalog {
+        .carousel {
+            .carousel-content {
+                h2 {
+                    font-size: 1.2rem !important;
+                }
+                p {
+                    font-size: 0.7rem !important;
+                    color: #000 !important;
+                }
+            }
+            .carousel-image {            
+                img {
+                    max-width: 95% !important;
+                }
+            }
+            .carousel-otherdetails {
+                h3 {
+                    font-size: 1rem !important;
+                }
+                ul {
+                    li {
+                        font-size: 0.7rem !important;
+                        color: #000 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        .navbar {
+            width: 50% !important;
+        }
+    }
+    .catalog {
+        .carousel {
+            .carousel-controls {        
+                button {
+                  font-size: 1.2rem !important;
+                  width: 40px !important;
+                  height: 40px !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        .navbar {
+            width: 70% !important;
+        }
+        .navbar.hide {
+            left: -70% !important;
+        }
+    }
+    .catalog {
+        padding: 1rem !important;
+        
+        .carousel {
+            grid-template-columns: 1fr !important; // only 1 column now
+            grid-template-rows: auto auto auto auto; // as many rows as needed
+            gap: 0rem !important; // space between rows
+            
+            .carousel-content {
+                grid-column: 1 / 2;
+                grid-row: 2; // placed below the image
+                margin-bottom: 1rem;
+                
+                h2 {
+                    font-size: 1.6rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: #666;
+                    line-height: 1.5;
+                }
+            }
+
+            .carousel-image {
+                grid-column: 1 / 2;
+                grid-row: 1; // placed at the top
+
+                img {
+                    max-width: 75% !important;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+
+            .carousel-otherdetails {
+                grid-column: 1 / 2;
+                grid-row: 3; // placed below the description
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    font-size: 1.3rem;
+                    margin-bottom: 1rem;
+                }
+
+                ul {
+                    list-style-type: disc;
+
+                    li {
+                        font-size: 0.9rem;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+            .carousel-controls-bottom {
+                position: relative !important;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+// @media (max-width: 768px) {
+//     .carousel {
+//         grid-template-columns: 1fr; // 1 column on mobile
+//         text-align: center;
+
+//         .carousel-content, 
+//         .carousel-image,
+//         .carousel-otherdetails {
+//             grid-column: span 1;
+//         }
+
+//         .carousel-controls {
+//             justify-content: center;
+//         }
+//     }
+// }
