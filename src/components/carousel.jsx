@@ -2,18 +2,20 @@ import { useState } from "react";
 
 function Carousel({ items }) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [imageIndex, setImageIndex] = useState(0);     // Image
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+        setImageIndex(0);
     };
 
     const prevSlide = () => {
-        setCurrentIndex((prevIndex) => 
-            prevIndex === 0 ? items.length - 1 : prevIndex - 1
-        );
+        setCurrentIndex((prevIndex) => prevIndex === 0 ? items.length - 1 : prevIndex - 1);
+        setImageIndex(0);
     };
 
     const { title, desc, details, image } = items[currentIndex];
+    const currentImage = image[imageIndex];
 
     return (
         <section className="carousel">
@@ -22,7 +24,16 @@ function Carousel({ items }) {
                 <p>{desc}</p>
             </article>
             <figure className="carousel-image">
-                <img src={image} alt={title} />
+                <img src={currentImage} alt={title} />
+                <div className="dot-indicators">
+                    {image.map((_, idx) => (
+                        <span
+                        key={idx}
+                        onClick={() => setImageIndex(idx)}
+                        className={`dot ${idx === imageIndex ? 'active' : ''}`}
+                        />
+                    ))}
+                </div>
                 <div className="carousel-controls">
                     <button onClick={prevSlide}>&lt;</button>
                     <button onClick={nextSlide}>&gt;</button>

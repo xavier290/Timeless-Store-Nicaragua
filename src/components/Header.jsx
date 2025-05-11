@@ -21,11 +21,11 @@ function Header() {
                     <a href="#">TIMELESS</a>
                 </div>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Acerca De</a></li>
-                    <li><Link to="/catalogo">Catálogo</Link></li>
-                    <li><a href="#">Envíos</a></li>
-                    <li><a href="#">Contáctanos</a></li>
+                    <li onClick={toggleMenu}><a href="#">Inicio</a></li>
+                    <li onClick={toggleMenu}><a href="#">Acerca De</a></li>
+                    <li onClick={toggleMenu}><Link to="/catalogo">Catálogo</Link></li>
+                    <li onClick={toggleMenu}><a href="#">Envíos</a></li>
+                    <li onClick={toggleMenu}><a href="#">Contáctanos</a></li>
                 </ul>
             </nav>
             <div 

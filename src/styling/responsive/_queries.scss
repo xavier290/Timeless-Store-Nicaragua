@@ -55,13 +55,9 @@
                 display: none !important;
             }
             .carousel-controls-bottom {
-                position: fixed; // now floating over the page
-                bottom: 0.8rem; // distance from bottom
-                left: 50%; // center horizontally
-                transform: translateX(-50%); // perfect center
                 display: flex !important;
                 justify-content: center;
-                gap: 1rem;
+                gap: 2rem;
 
                 button {
                     padding: 0.6rem 1.2rem;
@@ -141,8 +137,16 @@
 
 @media (max-width: 700px) {
     .header {
+        padding: 0 1rem !important;
+
         .navbar {
             width: 70% !important;
+
+            ul {
+                li {
+                    margin-bottom: 12px !important;
+                }
+            }
         }
         .navbar.hide {
             left: -70% !important;
@@ -188,6 +192,7 @@
                 grid-row: 3; // placed below the description
                 display: flex;
                 flex-direction: column;
+                margin-bottom: 16px;
 
                 h3 {
                     font-size: 1.3rem;
@@ -203,27 +208,93 @@
                     }
                 }
             }
-            .carousel-controls-bottom {
-                position: relative !important;
-                margin-top: 20px;
-            }
         }
     }
 }
 
-// @media (max-width: 768px) {
-//     .carousel {
-//         grid-template-columns: 1fr; // 1 column on mobile
-//         text-align: center;
+// larger screens
+@media (min-height: 800px) and (min-width: 1500px) {
 
-//         .carousel-content, 
-//         .carousel-image,
-//         .carousel-otherdetails {
-//             grid-column: span 1;
-//         }
+    .header {
+        .logo {
 
-//         .carousel-controls {
-//             justify-content: center;
-//         }
-//     }
-// }
+            a {
+                font-size: 1.5rem !important;
+            }
+        }
+
+        .navbar {
+            .title {
+                a {
+                    font-size: 1.5rem !important;
+                }
+            }
+
+            ul {
+                li {
+                    margin-bottom: 18px !important;
+
+                    a {
+                        font-size: 2rem !important;
+                    }
+                }
+            }
+
+        }
+
+        .menu-btn__burger {
+            width: 32px !important;
+            height: 6px !important;
+        }
+
+        .menu-btn__burger::before,
+        .menu-btn__burger::after {
+            width: 40px !important;
+            height: 6px !important;
+        }
+        .menu-btn__burger::before {
+            transform: translateY(-10px) !important;
+        }
+        
+        .menu-btn__burger::after {
+            transform: translateY(10px) !important;
+        }
+        .menu-btn.open .menu-btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px) !important;
+        }
+          
+        .menu-btn.open .menu-btn__burger::after {
+            transform: rotate(-45deg) translate(35px, 35px) !important;
+        }
+
+    }
+
+    .catalog {
+        h1 {
+            font-size: 1.4rem !important;
+        }
+
+        .carousel {
+            .carousel-content {
+                p {
+                    font-size: 1.3rem !important;
+                }
+            }
+
+            .carousel-image {
+                .carousel-controls {
+                    margin-top: 2.5rem !important;
+                }
+            }
+
+            .carousel-otherdetails {
+                ul {
+                    li {
+                        font-size: 1.3rem !important;
+                    }
+                }
+            }
+        }
+    }
+
+}

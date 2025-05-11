@@ -1,4 +1,6 @@
 import citizenasul from "./images/citizenazul.png";
+import citizenasul2 from "./images/Citizenazul2.png";
+import citizenasul3 from "./images/Citizenazul3.png";
 import BI103053E from "./images/citizennegro.png";
 import Invicta26973 from "./images/invicta.png";
 import TimexTW2V43700 from "./images/TimexTW2V43700.png";
@@ -16,7 +18,11 @@ const Slides = [
         "Resistencia al agua: 50 metros (5 ATM)",
         "Pulsera: Acero inoxidable, 20 mm de ancho, con cierre desplegable de botón pulsador",
       ],
-      image: citizenasul,
+      image: [
+        citizenasul,
+        citizenasul2,
+        citizenasul3,
+      ],
     },
     {
       title: "Invicta Pro Diver 26973",
@@ -30,7 +36,9 @@ const Slides = [
         "Resistencia al agua: 200 metros (20 ATM)",
         "Estilo: Elegante y deportivo, ideal para uso diario o actividades acuáticas",
       ],
-      image: Invicta26973,
+      image: [
+        Invicta26973
+      ],
     },
     {
       title: "Citizen BI1030-53E",
@@ -43,7 +51,9 @@ const Slides = [
         "Pulsera: Acero inoxidable, 20 mm de ancho, con cierre desplegable.",
         "Resistencia al agua: 30 metros (3 ATM)",
       ],
-      image: BI103053E,
+      image: [
+        BI103053E
+      ],
     },
     {
       title: "Timex TW2V43700 Chronograph",
@@ -56,7 +66,9 @@ const Slides = [
         "Pulsera: Tela negra, 20 mm de ancho, con hebilla",
         "Resistencia al agua: 50 metros (5 ATM)",
       ],
-      image: TimexTW2V43700,
+      image: [
+        TimexTW2V43700
+      ],
     },
     {
       title: "Invicta Pro Diver 47353",
@@ -70,7 +82,9 @@ const Slides = [
         "Resistencia al agua: 200 metros (20 ATM)",
         "Estilo: Elegante y deportivo, ideal para uso diario o actividades acuáticas",
       ],
-      image: Invicta47353,
+      image: [
+        Invicta47353
+      ],
     },
   ];
 
